@@ -1,2 +1,25 @@
-# tutormatch-mobile
-TutorMatch: password-free, browser-local WeChat ZIP tutor filtering for iPhone and Android.
+# TutorMatch 随身筛单
+
+免密码、无 Dukou 依赖的静态网页，供 iPhone Safari 和安卓 Chrome 等现代浏览器使用。
+
+网址：https://d68391156-web.github.io/tutormatch-mobile/
+
+## 导入
+
+1. 在微信使用原生聊天记录转发/导出能力，将 ZIP 保存到手机文件。不同版本入口可能不同；不能导出 ZIP 时，可导入已有的 TXT。
+2. 打开网页 → 导入微信 ZIP → 选择文件 → 确认群名。无需解压，无需 Dukou，无需网站密码。
+3. 本机解析、去重、筛选，默认最近72小时，按年级降序。
+
+网页无法直接读取微信；手机平台能否导出 ZIP 取决于微信实际版本。缺失条件待核实，不编造消息、通勤时间或联系方式。
+
+iPhone 可通过 Safari 分享菜单添加到主屏幕；安卓可通过浏览器菜单安装或添加到主屏幕。显示“已可离线使用”后可离线处理。首次打开需要联网。
+
+## 隐私与费用
+
+没有后端、登录、付费 AI API、分析追踪或聊天上传。消息与原始ZIP保存在当前浏览器 IndexedDB，GitHub只托管静态代码。不同设备/浏览器/域名的数据不自动同步；清理网站数据会丢失记录，请使用本机备份。苹果地图只在主动点击时接收起终点，公共交通结果需人工查看。
+
+## 开发
+
+直接托管仓库根目录，无构建步骤，无服务器。第三方 fflate 0.8.2 MIT 随文件发布，见 fflate-LICENSE.txt。
+
+已验证 Mac Safari ZIP 导入与离线使用；安卓和 iPhone 实机仍待验证。
